@@ -20,6 +20,9 @@
 		38DC21872E2E7694009EB75E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 38DC21862E2E7694009EB75E /* Kingfisher */; };
 		38DC218A2E2E77BD009EB75E /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 38DC21892E2E77BD009EB75E /* Reachability */; };
 		38DC218D2E2E7875009EB75E /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 38DC218C2E2E7875009EB75E /* Cosmos */; };
+		38DC21942E2E9751009EB75E /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DC21932E2E9751009EB75E /* MovieTableViewCell.swift */; };
+		38DC21992E2EBF6C009EB75E /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DC21982E2EBF6C009EB75E /* MovieDetailsViewController.swift */; };
+		38DC219C2E2EC6EF009EB75E /* UIImageColors in Frameworks */ = {isa = PBXBuildFile; productRef = 38DC219B2E2EC6EF009EB75E /* UIImageColors */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,8 @@
 		38DC21722E2E5FB5009EB75E /* MovieListingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieListingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DC21762E2E5FB5009EB75E /* MovieListingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListingUITests.swift; sourceTree = "<group>"; };
 		38DC21782E2E5FB5009EB75E /* MovieListingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38DC21932E2E9751009EB75E /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		38DC21982E2EBF6C009EB75E /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DC219C2E2EC6EF009EB75E /* UIImageColors in Frameworks */,
 				38DC218D2E2E7875009EB75E /* Cosmos in Frameworks */,
 				38DC21872E2E7694009EB75E /* Kingfisher in Frameworks */,
 				38DC218A2E2E77BD009EB75E /* Reachability in Frameworks */,
@@ -107,6 +113,7 @@
 		38DC21512E2E5FB1009EB75E /* MovieListing */ = {
 			isa = PBXGroup;
 			children = (
+				38DC218E2E2E96D4009EB75E /* features */,
 				38DC21522E2E5FB1009EB75E /* AppDelegate.swift */,
 				38DC21542E2E5FB1009EB75E /* SceneDelegate.swift */,
 				38DC21562E2E5FB1009EB75E /* ViewController.swift */,
@@ -136,6 +143,71 @@
 			path = MovieListingUITests;
 			sourceTree = "<group>";
 		};
+		38DC218E2E2E96D4009EB75E /* features */ = {
+			isa = PBXGroup;
+			children = (
+				38DC21952E2EBF17009EB75E /* getMovieDetails */,
+				38DC218F2E2E96E1009EB75E /* getAllMovies */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		38DC218F2E2E96E1009EB75E /* getAllMovies */ = {
+			isa = PBXGroup;
+			children = (
+				38DC21922E2E970E009EB75E /* model */,
+				38DC21912E2E9704009EB75E /* viewmodel */,
+				38DC21902E2E96F9009EB75E /* view */,
+			);
+			path = getAllMovies;
+			sourceTree = "<group>";
+		};
+		38DC21902E2E96F9009EB75E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				38DC21932E2E9751009EB75E /* MovieTableViewCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		38DC21912E2E9704009EB75E /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		38DC21922E2E970E009EB75E /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		38DC21952E2EBF17009EB75E /* getMovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				38DC21972E2EBF31009EB75E /* viewmodel */,
+				38DC21962E2EBF2B009EB75E /* view */,
+			);
+			path = getMovieDetails;
+			sourceTree = "<group>";
+		};
+		38DC21962E2EBF2B009EB75E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				38DC21982E2EBF6C009EB75E /* MovieDetailsViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		38DC21972E2EBF31009EB75E /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +228,7 @@
 				38DC21862E2E7694009EB75E /* Kingfisher */,
 				38DC21892E2E77BD009EB75E /* Reachability */,
 				38DC218C2E2E7875009EB75E /* Cosmos */,
+				38DC219B2E2EC6EF009EB75E /* UIImageColors */,
 			);
 			productName = MovieListing;
 			productReference = 38DC214F2E2E5FB1009EB75E /* MovieListing.app */;
@@ -233,6 +306,7 @@
 				38DC21852E2E7694009EB75E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				38DC21882E2E77BD009EB75E /* XCRemoteSwiftPackageReference "Reachability.swift" */,
 				38DC218B2E2E7875009EB75E /* XCRemoteSwiftPackageReference "Cosmos" */,
+				38DC219A2E2EC6EF009EB75E /* XCRemoteSwiftPackageReference "UIImageColors" */,
 			);
 			productRefGroup = 38DC21502E2E5FB1009EB75E /* Products */;
 			projectDirPath = "";
@@ -277,7 +351,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DC21942E2E9751009EB75E /* MovieTableViewCell.swift in Sources */,
 				38DC21572E2E5FB1009EB75E /* ViewController.swift in Sources */,
+				38DC21992E2EBF6C009EB75E /* MovieDetailsViewController.swift in Sources */,
 				38DC21532E2E5FB1009EB75E /* AppDelegate.swift in Sources */,
 				38DC21552E2E5FB1009EB75E /* SceneDelegate.swift in Sources */,
 				38DC215D2E2E5FB2009EB75E /* MovieListing.xcdatamodeld in Sources */,
@@ -653,6 +729,14 @@
 				minimumVersion = 25.0.1;
 			};
 		};
+		38DC219A2E2EC6EF009EB75E /* XCRemoteSwiftPackageReference "UIImageColors" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jathu/UIImageColors";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -670,6 +754,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 38DC218B2E2E7875009EB75E /* XCRemoteSwiftPackageReference "Cosmos" */;
 			productName = Cosmos;
+		};
+		38DC219B2E2EC6EF009EB75E /* UIImageColors */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38DC219A2E2EC6EF009EB75E /* XCRemoteSwiftPackageReference "UIImageColors" */;
+			productName = UIImageColors;
 		};
 /* End XCSwiftPackageProductDependency section */
 

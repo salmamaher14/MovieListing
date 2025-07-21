@@ -17,6 +17,9 @@
 		38DC216D2E2E5FB5009EB75E /* MovieListingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DC216C2E2E5FB5009EB75E /* MovieListingTests.swift */; };
 		38DC21772E2E5FB5009EB75E /* MovieListingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DC21762E2E5FB5009EB75E /* MovieListingUITests.swift */; };
 		38DC21792E2E5FB5009EB75E /* MovieListingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DC21782E2E5FB5009EB75E /* MovieListingUITestsLaunchTests.swift */; };
+		38DC21872E2E7694009EB75E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 38DC21862E2E7694009EB75E /* Kingfisher */; };
+		38DC218A2E2E77BD009EB75E /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 38DC21892E2E77BD009EB75E /* Reachability */; };
+		38DC218D2E2E7875009EB75E /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 38DC218C2E2E7875009EB75E /* Cosmos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DC218D2E2E7875009EB75E /* Cosmos in Frameworks */,
+				38DC21872E2E7694009EB75E /* Kingfisher in Frameworks */,
+				38DC218A2E2E77BD009EB75E /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +152,11 @@
 			dependencies = (
 			);
 			name = MovieListing;
+			packageProductDependencies = (
+				38DC21862E2E7694009EB75E /* Kingfisher */,
+				38DC21892E2E77BD009EB75E /* Reachability */,
+				38DC218C2E2E7875009EB75E /* Cosmos */,
+			);
 			productName = MovieListing;
 			productReference = 38DC214F2E2E5FB1009EB75E /* MovieListing.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +229,11 @@
 				Base,
 			);
 			mainGroup = 38DC21462E2E5FB1009EB75E;
+			packageReferences = (
+				38DC21852E2E7694009EB75E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				38DC21882E2E77BD009EB75E /* XCRemoteSwiftPackageReference "Reachability.swift" */,
+				38DC218B2E2E7875009EB75E /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = 38DC21502E2E5FB1009EB75E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -611,6 +627,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38DC21852E2E7694009EB75E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
+		38DC21882E2E77BD009EB75E /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		38DC218B2E2E7875009EB75E /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 25.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38DC21862E2E7694009EB75E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38DC21852E2E7694009EB75E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		38DC21892E2E77BD009EB75E /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38DC21882E2E77BD009EB75E /* XCRemoteSwiftPackageReference "Reachability.swift" */;
+			productName = Reachability;
+		};
+		38DC218C2E2E7875009EB75E /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38DC218B2E2E7875009EB75E /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		38DC215B2E2E5FB2009EB75E /* MovieListing.xcdatamodeld */ = {

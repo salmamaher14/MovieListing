@@ -29,32 +29,3 @@ class AppCoordinator {
 
 }
 
-/*
- class AppCoordinator {
-     
-     let navigationController: UINavigationController
-     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-     
-     init(navigationController: UINavigationController) {
-         self.navigationController = navigationController
-     }
-
-     func start() {
-         // 1. Instantiate ViewModel
-         let viewModel = TopMoviesViewModel() // or inject services if needed
-
-         // 2. Instantiate VC from storyboard
-         guard let vc = storyboard.instantiateViewController(
-             identifier: "TopMoviesViewController") { coder in
-                 return TopMoviesViewController(coder: coder, viewModel: viewModel)
-             }
-         else {
-             return
-         }
-
-         // 3. Push it
-         navigationController.pushViewController(vc, animated: true)
-     }
- }
-
- */

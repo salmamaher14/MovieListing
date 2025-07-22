@@ -22,6 +22,7 @@ class MovieCoreData {
     func insert(movie: Movie) {
         let newMovie = MovieData(context: context)
         newMovie.title = movie.title
+        newMovie.release_date = movie.releaseDate
         newMovie.original_language = movie.originalLanguage
         newMovie.overview = movie.overview
         newMovie.poster_path = movie.posterPath

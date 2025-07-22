@@ -7,6 +7,9 @@
 
 import Foundation
 import Combine
+import Reachability
+import CoreData
+
 
 
 
@@ -22,6 +25,8 @@ protocol TopMoviesViewModelProtocol {
 
 class TopMoviesViewModel: TopMoviesViewModelProtocol {
     private let movieService: MovieNetworkService
+    private let reachability = try? Reachability()
+
     
     @Published private(set) var movies: [Movie] = []
     @Published var isLoading: Bool = false
@@ -34,8 +39,47 @@ class TopMoviesViewModel: TopMoviesViewModelProtocol {
     }
 
 
-    
     func fetchMovies() {
+        isLoading = true
+
+        guard let reachability = reachability else {
+            loadCachedMovies()
+            isLoading = false
+            return
+        }
+
+        if reachability.connection == .unavailable {
+            print("No internet connection. Loading cached movies.")
+            loadCachedMovies()
+            isLoading = false
+            return
+        }
+
+        // If movies already cached, we will skip api call
+        if !MovieCoreData.shared.fetchAll().isEmpty {
+            print("Using cached movies.")
+            loadCachedMovies()
+            isLoading = false
+            return
+        }
+
+        movieService.fetchTopMovies()
+            .sink(receiveCompletion: { _ in
+                self.isLoading = false
+            }, receiveValue: { [weak self] movies in
+                guard let self = self else { return }
+                self.movies = movies
+                
+                MovieCoreData.shared.deleteAll()
+                for movie in movies {
+                    MovieCoreData.shared.insert(movie: movie)
+                }
+            })
+            .store(in: &cancellables)
+    }
+   
+    // calling the api .
+   /* func fetchMovies() {
         isLoading = true
         movieService.fetchTopMovies()
             .sink(receiveCompletion: { _ in
@@ -51,7 +95,7 @@ class TopMoviesViewModel: TopMoviesViewModelProtocol {
                 }
             })
             .store(in: &cancellables)
-    }
+    }*/
     
     
     func loadCachedMovies() {
@@ -70,23 +114,11 @@ class TopMoviesViewModel: TopMoviesViewModelProtocol {
         self.movies = cachedMovies
     }
 
+    
+
 
 
     private var cancellables = Set<AnyCancellable>()
 }
 
 
-
-/* func fetchMovies() {
-     isLoading = true
-     movieService.fetchTopMovies()
-         .sink(receiveCompletion: { _ in
-             self.isLoading = false
-         },
-               receiveValue: { [weak self] movies in
-             print("movies: \(movies.count)")
-                   self?.movies = movies
-               })
-         .store(in: &cancellables)
- }*/
- 

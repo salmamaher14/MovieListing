@@ -88,6 +88,11 @@ class TopMoviesViewController: UIViewController, UITableViewDelegate, UITableVie
             let viewModel = MovieDetailsViewModel(movie: selectedMovie)
             detailsVC.viewmodel = viewModel
             
+            let backItem = UIBarButtonItem()
+            backItem.title = "Movies"
+            navigationItem.backBarButtonItem = backItem
+                   
+            
             navigationController?.pushViewController(detailsVC, animated: true)
         }
     }

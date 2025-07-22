@@ -82,7 +82,11 @@ class MovieDetailsViewController: UIViewController {
         guard let movie = viewmodel?.getSelectedMovie() else { return }
 
         movieTitle.text = movie.title
-        movieLanguage.text = movie.originalLanguage.uppercased()
+        
+        let locale = Locale(identifier: "en")
+        let languageName = locale.localizedString(forLanguageCode: movie.originalLanguage) ?? movie.originalLanguage
+        movieLanguage.text = languageName.capitalized
+        
         movieOverview.text = movie.overview
         voteAverage.text = "\(movie.voteAverage)/10"
         

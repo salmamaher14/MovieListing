@@ -42,13 +42,17 @@ class MovieTableViewCell: UITableViewCell {
 
     private func configurePoster(_ posterPath: String?) {
         moviePoster.layer.cornerRadius = 10
+        
+        let placeholder = UIImage(systemName: "film")?.withTintColor(.lightGray, renderingMode: .alwaysOriginal)
+        
         if let posterPath = posterPath,
            let url = URL(string: Constants.poster_url + posterPath) {
-            moviePoster.kf.setImage(with: url, placeholder: UIImage(named: "movie_image"))
+            moviePoster.kf.setImage(with: url, placeholder: placeholder)
         } else {
-            moviePoster.image = UIImage(named: "movie_image")
+            moviePoster.image = placeholder
         }
     }
+
 
     private func configureRating(_ rating: Double) {
 

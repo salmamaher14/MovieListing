@@ -81,6 +81,20 @@ class TopMoviesViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedMovie = viewModel.movies[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailsVC = storyboard.instantiateViewController(withIdentifier: "MovieDetailsViewController") as? MovieDetailsViewController {
+            
+            let viewModel = MovieDetailsViewModel(movie: selectedMovie)
+            detailsVC.viewmodel = viewModel
+            
+            navigationController?.pushViewController(detailsVC, animated: true)
+        }
+    }
+
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }

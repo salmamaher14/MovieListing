@@ -5,12 +5,7 @@
 //  Created by Salma on 21/07/2025.
 //
 
-//
-//  MovieDetailsViewController.swift
-//  MovieListing
-//
-//  Created by Salma on 21/07/2025.
-//
+
 
 import UIKit
 import Kingfisher

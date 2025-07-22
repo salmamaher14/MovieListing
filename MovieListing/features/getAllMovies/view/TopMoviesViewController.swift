@@ -17,8 +17,6 @@ class TopMoviesViewController: UIViewController, UITableViewDelegate, UITableVie
     private var cancellables = Set<AnyCancellable>()
     private let activityIndicator = UIActivityIndicatorView(style: .large)
 
-    
-   
 
     
     override func viewDidLoad() {

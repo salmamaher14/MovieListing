@@ -21,7 +21,7 @@
 
 
 🔧 Setup Instructions:
-   clone the project from the github , and try running the app first in the iphone 15 pro simulator (this is which i try and test but feel free to run on any screen you want.)
+     clone the project from the github , and try running the app first in the iphone 15 pro simulator (this is which i try and test but feel free to run on any screen you want.)
 
 
 

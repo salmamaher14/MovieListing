@@ -1,4 +1,4 @@
-<img width="1179" height="2556" alt="Simulator Screenshot - iPhone 16 - 2025-09-10 at 16 30 27" src="https://github.com/user-attachments/assets/48cc0012-80ae-4708-acca-c44859e8844a" /># 🎬 Movie Listing App
+🎬 Movie Listing App
 
 A simple iOS app built with Swift that displays a list of top-rated movies using a clean and user-friendly interface.  
 The app fetches movie data from a remote API and showcases movie posters, details, and more.

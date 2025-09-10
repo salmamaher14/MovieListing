@@ -54,58 +54,62 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovieMovieMovieMovieMovieMovieMovieMovieMovie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzN-Qm-mQk">
-                                                    <rect key="frame" x="101" y="17" width="256" height="21.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <rect key="frame" x="101" y="17" width="256" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 20, 2025Jun 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiQ-VZ-9Ma">
-                                                    <rect key="frame" x="100.99999999999999" y="46.666666666666664" width="152.66666666666663" height="20.333333333333336"/>
+                                                    <rect key="frame" x="100.99999999999999" y="45.333333333333336" width="152.66666666666663" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrq-9V-0pS">
-                                                    <rect key="frame" x="101" y="79" width="101" height="26"/>
+                                                    <rect key="frame" x="101" y="77.666666666666671" width="101" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="26" id="aSW-u9-utj"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tXg-12-3XP">
-                                                    <rect key="frame" x="60" y="12" width="25" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="tXg-12-3XP">
+                                                    <rect key="frame" x="64" y="8" width="25" height="25"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="RCI-WE-hGd">
                                                             <rect key="frame" x="0.0" y="1" width="25" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="tintColor" name="main_color"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="Button">
-                                                                <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                                                            <state key="normal">
+                                                                <imageReference key="image" image="heart" catalog="system" symbolScale="medium"/>
                                                             </state>
+                                                            <buttonConfiguration key="configuration" style="gray">
+                                                                <imageReference key="image" image="heart" catalog="system" symbolScale="medium"/>
+                                                                <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="btn_fav:" destination="2uC-hA-tnM" eventType="touchUpInside" id="vK9-nV-grj"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <color key="tintColor" systemColor="systemTealColor"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="SzN-Qm-mQk" firstAttribute="leading" secondItem="KAc-rX-735" secondAttribute="trailing" constant="12" id="0Xo-ZI-7RP"/>
+                                                <constraint firstItem="tXg-12-3XP" firstAttribute="top" secondItem="KAc-rX-735" secondAttribute="top" id="3Mn-tB-dB5"/>
+                                                <constraint firstItem="tXg-12-3XP" firstAttribute="width" secondItem="KAc-rX-735" secondAttribute="width" multiplier="0.280899" id="8xB-Qc-dUw"/>
+                                                <constraint firstItem="tXg-12-3XP" firstAttribute="trailing" secondItem="KAc-rX-735" secondAttribute="trailing" id="AKN-iX-7e0"/>
                                                 <constraint firstItem="Qrq-9V-0pS" firstAttribute="leading" secondItem="KAc-rX-735" secondAttribute="trailing" constant="12" id="Nxk-Bu-Uf8"/>
                                                 <constraint firstAttribute="trailing" secondItem="SzN-Qm-mQk" secondAttribute="trailing" constant="12" id="Tan-y8-9pp"/>
                                                 <constraint firstItem="OiQ-VZ-9Ma" firstAttribute="leading" secondItem="KAc-rX-735" secondAttribute="trailing" constant="12" id="Zs6-B6-tLZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="KAc-rX-735" secondAttribute="bottom" constant="8" id="jCd-gy-8jQ"/>
                                                 <constraint firstItem="Qrq-9V-0pS" firstAttribute="width" secondItem="wql-Xv-N4G" secondAttribute="width" multiplier="0.273713" id="ka9-yW-wxF"/>
                                                 <constraint firstItem="SzN-Qm-mQk" firstAttribute="top" secondItem="wql-Xv-N4G" secondAttribute="topMargin" constant="5" id="ogY-9o-G3U"/>
-                                                <constraint firstItem="RCI-WE-hGd" firstAttribute="leading" secondItem="KAc-rX-735" secondAttribute="trailing" constant="-29" id="rzR-sx-UB2"/>
+                                                <constraint firstItem="tXg-12-3XP" firstAttribute="height" secondItem="KAc-rX-735" secondAttribute="height" multiplier="0.185185" id="tRj-eb-0V0"/>
                                                 <constraint firstItem="KAc-rX-735" firstAttribute="top" secondItem="wql-Xv-N4G" secondAttribute="top" constant="8" id="wVj-nn-WDF"/>
                                                 <constraint firstItem="OiQ-VZ-9Ma" firstAttribute="top" secondItem="SzN-Qm-mQk" secondAttribute="bottom" constant="8" symbolic="YES" id="wwV-jD-FE5"/>
                                                 <constraint firstItem="Qrq-9V-0pS" firstAttribute="top" secondItem="OiQ-VZ-9Ma" secondAttribute="bottom" constant="12" id="x1p-cD-8tS"/>
                                                 <constraint firstItem="KAc-rX-735" firstAttribute="leading" secondItem="wql-Xv-N4G" secondAttribute="leading" id="xEu-Ja-xav"/>
-                                                <constraint firstItem="RCI-WE-hGd" firstAttribute="top" secondItem="KAc-rX-735" secondAttribute="top" id="xM4-f1-uT8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -146,10 +150,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUq-Eq-Ieh">
-                                <rect key="frame" x="0.0" y="71" width="393" height="300"/>
+                                <rect key="frame" x="0.0" y="71" width="156.66666666666666" height="300"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cosmic_Fireball_Falling_Over_ALMA.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fSh-gp-gKg">
-                                        <rect key="frame" x="96.666666666666686" y="0.0" width="200" height="300"/>
+                                        <rect key="frame" x="-21.666666666666671" y="0.0" width="200" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="F1H-ma-qGL"/>
                                         </constraints>
@@ -164,7 +168,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="673-7B-3Kf">
-                                <rect key="frame" x="43.666666666666671" y="451.33333333333331" width="236.33333333333331" height="17"/>
+                                <rect key="frame" x="43.666666666666664" y="451.33333333333331" width="0.0" height="17"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Language:" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kd4-lt-9ST">
                                 <rect key="frame" x="10" y="480.33333333333331" width="143" height="21"/>
@@ -178,8 +182,8 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synderlla " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGw-Qc-gE3">
-                                <rect key="frame" x="10" y="381" width="310" height="34.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGw-Qc-gE3">
+                                <rect key="frame" x="10.000000000000007" y="381" width="123.66666666666669" height="34.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="310" id="df5-Wg-Bl4"/>
                                 </constraints>
@@ -190,14 +194,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1Y-Eu-YjX">
                                 <rect key="frame" x="10.000000000000002" y="451.33333333333331" width="20.666666666666671" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQV-fc-gbe">
-                                <rect key="frame" x="332.33333333333331" y="381" width="50.666666666666686" height="34.333333333333314"/>
+                                <rect key="frame" x="96" y="381" width="50.666666666666657" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
-                                    <color key="baseForegroundColor" name="main_color"/>
+                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="fav_btn:" destination="GKH-yp-J0G" eventType="touchUpInside" id="LxN-6P-ugX"/>
@@ -216,9 +220,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-1W-8MZ">
-                                <rect key="frame" x="10" y="559.66666666666663" width="373" height="231.66666666666663"/>
+                                <rect key="frame" x="10" y="554.66666666666663" width="136.66666666666666" height="236.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">n the rugged isle of Berk, where Vikings and dragons have been bitter enemies for generations, Hiccup stands apart, defying centuries of tradition when he befriends Toothless, a feared Night Fury dragon. Their unlikely bond reveals the true nature of dragons, challenging the very foundations of Viking society.n the rugged isle of Berk, where Vikings and dragons have been bitter enemies for generations, Hiccup stands apart, defying centuries of tradition when he befriends Toothless, a feared Night Fury dragon. Their unlikely bond reveals the true nature of dragons, challenging the very foundations of Viking society.n the rugged isle of Berk, where Vikings and dragons have been bitter enemies for generations, Hiccup stands apart, defying centuries of tradition when he befriends Toothless, a feared Night Fury dragon. Their unlikely bond reveals the true nature of dragons, challenging the very foundations of Viking society.</mutableString>
+                                <string key="text">n the rugged isle of Berk, where Vikings and dragons have been bitter enemies for generations, Hiccup stands apart, defying centuries of tradition when he befriends Toothless, a feared Night Fury dragon. Their unlikely bond reveals the true nature of dragons, challenging the very foundations of Viking society.n the rugged isle of Berk, where Vikings and dragons have been bitter enemies for generations, Hiccup stands apart, defying centuries of tradition when he befriends Toothless, a feared Night Fury dragon. Their unlikely bond reveals the true nature of dragons, challenging the very foundations of Viking society.n the rugged isle of Berk, where Vikings and dragons have been bitter enemies for generations, Hiccup stands apart, defying centuries of tradition when he befriends Toothless, a feared Night Fury dragon. Their unlikely bond reveals the true nature of dragons, challenging the very foundations of Viking society.</string>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -230,7 +234,7 @@
                             <constraint firstItem="mGw-Qc-gE3" firstAttribute="width" secondItem="v4R-Vs-uZE" secondAttribute="width" multiplier="0.788804" id="0Iw-Nl-dck"/>
                             <constraint firstItem="673-7B-3Kf" firstAttribute="leading" secondItem="g1Y-Eu-YjX" secondAttribute="trailing" constant="13" id="2km-0y-xOc"/>
                             <constraint firstItem="69d-DT-hsY" firstAttribute="top" secondItem="Kd4-lt-9ST" secondAttribute="bottom" constant="5" id="7Pg-m7-hpI"/>
-                            <constraint firstItem="gJe-1W-8MZ" firstAttribute="top" secondItem="5UR-b4-KVN" secondAttribute="bottom" constant="5" id="FnG-Ld-nUe"/>
+                            <constraint firstItem="gJe-1W-8MZ" firstAttribute="top" secondItem="5UR-b4-KVN" secondAttribute="bottom" id="FnG-Ld-nUe"/>
                             <constraint firstItem="bSe-15-UKI" firstAttribute="top" secondItem="mGw-Qc-gE3" secondAttribute="bottom" constant="10" id="HUm-u2-wSZ"/>
                             <constraint firstItem="5UR-b4-KVN" firstAttribute="top" secondItem="69d-DT-hsY" secondAttribute="bottom" constant="12" id="Jae-eG-iaM"/>
                             <constraint firstItem="673-7B-3Kf" firstAttribute="centerY" secondItem="g1Y-Eu-YjX" secondAttribute="centerY" id="KXN-Ju-dvB"/>
@@ -283,9 +287,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

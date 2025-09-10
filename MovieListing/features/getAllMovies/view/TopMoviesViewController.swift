@@ -38,6 +38,7 @@ class TopMoviesViewController: UIViewController, UITableViewDelegate, UITableVie
     private func setupTableView() {
         moviesTableView.dataSource = self
         moviesTableView.delegate = self
+        moviesTableView.translatesAutoresizingMaskIntoConstraints = false
     
     }
     
@@ -97,9 +98,9 @@ class TopMoviesViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
 
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+
+   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 
 

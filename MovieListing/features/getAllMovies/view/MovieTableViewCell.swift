@@ -28,8 +28,9 @@ class MovieTableViewCell: UITableViewCell {
         configurePoster(movie.posterPath)
         configureRating(movie.voteAverage)
         updateFavButtonUI()
-        
     }
+    
+
 
     // MARK: - Private Configuration Helpers
     private func configureTitle(_ title: String?) {
